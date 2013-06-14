@@ -1,6 +1,6 @@
 //don't touch the below
 exports.controller = function controller(controllerName){
-    d = __dirname + '/../';
+    d = __dirname + '/../controllers/';
     return d + controllerName;
 }
 

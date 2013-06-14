@@ -4,7 +4,7 @@
  */
 
 var express = require('express')
-  , routesConfigs = require('./routes/config/routes-config')
+  , routes = require('./routes/routes-mapping')
   , http = require('http')
   , path = require('path');
  var engines = require('consolidate');
@@ -14,8 +14,8 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-//app.engine('.html', require('ejs').__express);
+app.engine('.html', require('ejs').__express);
+app.set('view engine', 'html');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
@@ -29,7 +29,7 @@ if ('development' == app.get('env')) {
 }
 
 //configure all routes so that they are not done here
-routesConfigs.initAllRoutes(app);
+routes.initAllRoutes(app);
 
 
 http.createServer(app).listen(app.get('port'), function(){
