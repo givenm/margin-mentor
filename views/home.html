@@ -1,35 +1,45 @@
 <% include layout/header.html %>
     <style type="text/css">
-        .span8{
-            background-color: grey;   
+        .span8[id=top-left], .span4, .span3{
+            background-color: rgba(100, 100, 100, 0.5);   
         }
         
         #top-content .span8, #top-content .span4{
-            height: 500px;                  
-        }
-        
-        .span4{
-            background-color: grey;   
-        }
+            height: 450px;                  
+        }        
+       
         
         #bottom-content{               
-            margin-top: 10px;
-/*            background-color: grey;*/
+            margin: 20px 0px 20px 0px;
+/*            border-bottom: solid 1px black;*/
+            
         }
         
-        #bottom-content .span3{
-            background-color: red;
+        #bottom-content .span3{            
             border-radius: 2px;
-            height: 200px; 
+            height: 150px; 
+            box-shadow:0px 0px 6px rgb(100, 100, 100);
+            
+        }
+        
+        #bottom-content .span3:hover{
+               transform:rotate(15deg) ;
+            -ms-transform:rotate(15deg); /* IE 9 */
+            -webkit-transform: scale(1,1) translateY(-10px); /* Safari and Chrome */
+            box-shadow:0px 10px 10px rgb(100, 100, 100);
+            border-radius: 4px;
+            transition: transform 0.5s;
+            -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
+/*            -webkit-transition-timing-function:linear;*/
         }
         
     </style>
     
     <div class="row-fluid main">
 <!--        put your code in here-->
-        <div id="main-content" class="row-fluid span10" style="margin: auto; float:none;">
+        <div id="main-content" class="row-fluid span8" style="margin: auto; float:none;">
             <div id="top-content" class="row-fluid">
-                <div class="span8 text-center">
+                <div id="top-left" class="span8 text-center">
                     span 8
                 </div>
                 <div class="span4 text-center">
