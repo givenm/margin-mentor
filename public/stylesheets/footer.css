@@ -1,0 +1,74 @@
+.footer {
+	background-color: rgb(49, 50, 55);
+	height: 300px;
+}
+
+.back-to-top {
+	margin: -35px 0 0 48%;	
+	background-color: white;
+	height: 35px;
+	width: 55px;
+	cursor: pointer;
+	background-image: url('/images/back-to-top.png');	
+	border-top-left-radius: 3px; 
+	border-top-right-radius: 3px; 
+}
+
+.back-to-top img{
+	margin: 0 0 0 0;	
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;	
+}
+
+.footer-content{
+	margin: 40px 0 0 0;
+	position: relative;
+	height:60%;	
+	border-bottom: 1px solid grey;
+}
+
+.footer-content h4{
+	color: grey;	
+	font-weight: normal;
+}
+
+.footer-content p{
+	color: rgb(208, 214, 214);		
+}
+
+.footer-content p{
+	font-size: 12px;
+}
+
+.footer-left{
+	left:5%;
+	position: absolute;
+}
+.footer-middle{
+	left:38%;
+	position: absolute;
+}
+.footer-right{
+	left:75%;
+	position: absolute;
+}
+
+.trademark{
+	height: 20px;
+	margin: 20px 0 0 0;
+	text-align: center;
+	color: white;
+}
+
+.footer a{
+	color: rgb(208, 214, 214);
+}
+
+.footer .trademark  a{
+	color: grey;
+	margin-right: 20px;
+}
+
+
+
+

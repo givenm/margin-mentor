@@ -12,7 +12,7 @@ var homeController = require(c.controller('HomeController'))
 exports.initAllRoutes = function(app){
     //home page controller
     app.get('/', homeController.index); 
-    
+    app.get('/slider', homeController.slider);
     
     //UserController
     app.get('/users', userController.list);

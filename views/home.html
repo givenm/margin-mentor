@@ -1,70 +1,172 @@
-<% include layout/header.html %>
-    <style type="text/css">
-        .span8[id=top-left], .span4, .span3{
-            background-color: rgba(100, 100, 100, 0.5);   
-        }
-        
-        #top-content .span8, #top-content .span4{
-            height: 450px;                  
-        }        
-       
-        
-        #bottom-content{               
-            margin: 20px 0px 20px 0px;
-/*            border-bottom: solid 1px black;*/
-            
-        }
-        
-        #bottom-content .span3{            
-            border-radius: 2px;
-            height: 150px; 
-            box-shadow:0px 0px 6px rgb(100, 100, 100);
-            
-        }
-        
-        #bottom-content .span3:hover{
-               transform:rotate(15deg) ;
-            -ms-transform:rotate(15deg); /* IE 9 */
-            -webkit-transform: scale(1,1) translateY(-10px); /* Safari and Chrome */
-            box-shadow:0px 10px 10px rgb(100, 100, 100);
-            border-radius: 4px;
-            transition: transform 0.5s;
-            -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
-/*            -webkit-transition-timing-function:linear;*/
-        }
-        
-    </style>
-    
-    <div class="row-fluid main">
-<!--        put your code in here-->
-        <div id="main-content" class="row-fluid span8" style="margin: auto; float:none;">
-            <div id="top-content" class="row-fluid">
-                <div id="top-left" class="span8 text-center">
-                    span 8
-                </div>
-                <div class="span4 text-center">
-                    span 4
-                </div>
-            </div>
-            <div id="bottom-content" class="row-fluid">
-                <div class="text-center span3">
-                    span 3
-                </div>
-                <div class="text-center span3">
-                    span 3
-                </div>
-                <div class="text-center span3">
-                    span 3
-                </div>
-                <div class="text-center span3">
-                    span 3
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Margin Mentor</title>
+		<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
+		<link type="text/css" rel="stylesheet" href="stylesheets/menu.css">
+		<link type="text/css" rel="stylesheet" href="stylesheets/home.css">
+		<link type="text/css" rel="stylesheet" href="stylesheets/tabs.css">
+		<link type="text/css" rel="stylesheet" href="stylesheets/footer.css">
+		
+		<!--[if gt IE 5.5]>
+			<link rel="stylesheet" type="text/css" href="stylesheets/all-ie-only.css" />
+		<![endif]-->
+	</head>
+	<body>
+		<div class="row-fluid page-wrap">
+			<!--            <% include layout/menu.html %>-->
+			<div class="row-fluid menu-container">
+				<div class="menu row-fluid span6 offset5 visible-desktop">
+					<a href="#">
+						<div class="menuitem span2" style="margin:0;">
+							<div class="menu-text">
+								Home
+							</div>
+							<div class="menu-bottom-slide"></div>
+							<img class="menu-image" src="images/1.jpg"/>
+						</div>
+					</a>
+
+					<a href="#">
+						<div class="menuitem span2" style="margin:0;">
+							<div class="menu-text">
+								Tour
+							</div>
+							<div class="menu-bottom-slide"></div>
+							<img class="menu-image" src="images/2.jpg"/>
+						</div> 
+					</a>
+					<a href="#">
+						<div class="menuitem span2" style="margin:0;">
+							<div class="menu-text">
+								Security
+							</div>
+							<div class="menu-bottom-slide"></div>
+							<img class="menu-image" src="images/3.jpg"/>
+						</div> 
+					</a>
+					<a href="#">
+						<div class="menuitem span2" style="margin:0;">
+							<div class="menu-text">
+								Pricing
+							</div>
+							<div class="menu-bottom-slide"></div>
+							<img class="menu-image" src="images/4.jpg"/>
+						</div> 
+					</a>										
+					
+					<div class="login-btn-container  menuitem span2" style="width:113px; height:40px; margin: 11px 0 0 10%;">
+						<div class="login-btn" >
+							<i class="icon-lock icon-white"></i> SIGN IN
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row-fluid slider-container" <!--[if gt IE 5.5]><![endif]-->>
+				<div class="row-fluid span7 offset2 hidden-phone">
+					<div class="span4 slider-overlay">
+						<div class="span11 bold-slider-text">
+							"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+						</div>
+						<div class="span11 nomal-slider-text">
+							"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+						</div>
+						<div class="row-fluid span7 slider-overlay-btn-container">
+							<div class="span12  slider-overlay-btn">
+								SIGN UP
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<iframe class="span12" style="height: 520px; border:none; background-color: #f5e5c5; margin-left:0;"   src="slider"></iframe>
+			</div>
+
+			<div class="row-fluid main-content-container">
+
+				<div class="row-fluid span8 offset2 main-content">
+					<div class="row-fluid tabs-wrap visible-desktop">            
+			            <div class="navigation row-fluid span12">			            		
+				                <a href="#one"><div class="span2 tab-menuitem offset2 link-active first-menuitem">One</div></a>
+				                <a href="#two"><div class="span2 tab-menuitem link-disabled">Two</div></a>
+				                <a href="#three"><div class="span2 tab-menuitem link-disabled">Three</div></a>
+				                <a href="#four"><div class="span2 tab-menuitem link-disabled last-menuitem" >Four</div></a>			               		
+			            </div>
+			            
+			            <div class="navigation-wrap  lines"></div>
+			            
+			            <div class="focus-wrap row-fluid span12" style="margin: 35px 0 0 0;">
+			                <div id="one" class="row-fluid focus-active">One content</div>
+			                <div id="two" class="row-fluid focus-hide" > Two content</div>
+			                <div id="three" class="row-fluid focus-hide">Three content</div>
+			                <div id="four" class="row-fluid focus-hide">Four content</div>
+			            </div>
+			        </div>
+					
+				</div>
+
+			</div>
+
+			<div class="row-fluid footer">
+				<div class="back-to-top">				
+				</div>
+				<div class="row-fulid span6 offset3 footer-content">
+					<div class="span4 footer-left">
+						<h4>MARGIN MENTOR</h4>
+						<p><a href="#">HOME</a></p>
+						<p><a href="#">TOUR</a></p>
+						<p><a href="#">SECURITY</a></p>
+						<p><a href="#">PRICING</a></p>
+					</div>
+					<div class="span4 footer-middle">
+						<h4>LEGAL</h4>
+						<p><a href="#">TERMS OF USE</a></p>
+						<p><a href="#">PRIVACY POLICY</a></p>
+						<p><a href="#">SECURITY AND DATA</a></p>
+						<p><a href="#">TERMS AND CONDITIONS</a></p>
+					</div>
+					<div class="span4 footer-right">
+						<h4>CONTUCT US</h4>
+						<p>FIND US</p>
+						<p><a href="#"><img src="images/facebook.png" style="margin: -4px 0 0 0;"/> FACEBOOK</a></p>
+						<p><a href="#"><img src="images/twitter.png" /> TWITTER</a></p>
+						<p><a href="#"><img src="images/google-plus.png" style="height: 17px;"/> GOOGLE +</a></p>
+					</div>
+				</div>
+				<div class="row-fluid span6 offset3 trademark">
+					<a class="terms-of-service" href="#">Terms of Service</a>
+					<a href="#">Privacy</a>
+					<a href="#">&copy 2013 www.marginmentor.co.za</a>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="javascripts/jquery-lib-1.10.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="javascripts/organictabs.jquery.js"></script>
+		<script type="text/javascript" src="javascripts/custom-scripts.js"></script>
+		<script type="text/javascript">
+            $(document).ready(function(){
+                $('.focus-active').animate({'margin-left': '0%'}, 200);
                 
-            </div>
-        </div>
-        
-        
-        
-    </div>
-    
-<% include layout/footer.html %>
+                $('.navigation a').click(function(){                    
+                    id = $(this).attr('href');                    
+                    if(!$( id ).hasClass('focus-active')){ //when not active
+                    	$('.link-active').addClass('link-disabled').removeClass('link-active');
+                    	$(this).children('div').addClass('link-active').removeClass('link-disabled');
+                        $('.focus-active').animate({'margin-left': '-100%'}, 300, function(){
+                            $('.focus-active').addClass('focus-hide').removeClass('focus-active').css('margin-left', '100%');                            
+                            $( id ).addClass('focus-active').removeClass('focus-hide').animate({'margin-left': '0%'}, 300);                            
+                        });
+                        
+                    }
+                });
+                
+            });
+        </script>
+		
+	</body>
+</html>

@@ -1,0 +1,114 @@
+.tabs-wrap{
+    margin: 0 0 0 0;
+    background-color: white;
+    background-image: url('/images/header-background.png');
+    position: relative;
+}
+
+.navigation{
+    text-align:center; 
+    z-index: 100;  
+    position: absolute; 
+    left: 5%;            
+}
+
+.link-active{
+	background-image: url('/images/tab-background-active.png');
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-bottom: none;
+}
+
+.link-disabled{
+	background-image: url('/images/tab-background-disabled.png');
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.navigation-wrap{
+	height: 50px;
+	padding: 10px 15px 9px 0;
+	width: 61%;
+	position: absolute;
+	left: 20%;
+	border-radius: 5px;	
+	border: 1px solid grey;
+	background-color:white;
+	background-image: url('/images/tab-nav-background.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-moz-box-shadow: 0 0 3px #666; 
+    -webkit-box-shadow: 0 0 5px #666;
+    box-shadow: 0 0 5px #666;
+}
+
+.tab-menuitem{
+    border-left:1px solid grey;
+    border-bottom:1px solid grey;
+    border-top:1px solid grey;
+    display:inline-block;
+    padding: 5px 0 0 0;
+    margin-top: 20px;  
+    z-index: 99; 
+    background-color:  rgb(148, 191, 207);    
+   	font-weight:bold;
+    height: 33px;  
+}
+
+.first-menuitem{
+	border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.last-menuitem{
+    border-right:1px solid grey;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.focus-wrap{
+    border:1px grey solid;
+    height:500px;
+    overflow:hidden;
+    background-color:white;
+    z-index: 0;
+    border-radius: 6px;    
+}
+
+.focus-active{
+    display:block;
+    margin-left:100%;
+}
+
+.focus-hide{
+    display:none;
+}
+
+
+#one, #two, #three, #four{
+    height: 100%;
+    padding-top: 40px;
+}
+
+#one{
+    background-color:green;   
+}
+#two{
+    background-color:pink;   
+}
+#three{
+    background-color:purple;   
+}
+#four{
+    background-color:yellow;   
+}
